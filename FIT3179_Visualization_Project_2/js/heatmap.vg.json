@@ -1,0 +1,83 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 500,
+    "data": {"values":[
+        {"fst_factor": "Economic Freedom", "scnd_factor": "Economic Freedom", "correlation": 1.00},
+        {"fst_factor": "Economic Freedom", "scnd_factor": "Government Size", "correlation": 0.29},
+        {"fst_factor": "Economic Freedom", "scnd_factor": "Property Rights", "correlation": 0.72},
+        {"fst_factor": "Economic Freedom", "scnd_factor": "Sound Money", "correlation": 0.80},
+        {"fst_factor": "Economic Freedom", "scnd_factor": "Trade", "correlation": 0.84},
+        {"fst_factor": "Economic Freedom", "scnd_factor": "Regulation", "correlation": 0.76},
+
+        {"fst_factor": "Government Size", "scnd_factor": "Economic Freedom", "correlation": 0.29},
+        {"fst_factor": "Government Size", "scnd_factor": "Government Size", "correlation": 1.00},
+        {"fst_factor": "Government Size", "scnd_factor": "Property Rights", "correlation": -0.16},
+        {"fst_factor": "Government Size", "scnd_factor": "Sound Money", "correlation": 0.11},
+        {"fst_factor": "Government Size", "scnd_factor": "Trade", "correlation": 0.08},
+        {"fst_factor": "Government Size", "scnd_factor": "Regulation", "correlation": 0.15},
+
+        {"fst_factor": "Property Rights", "scnd_factor": "Economic Freedom", "correlation": 0.72},
+        {"fst_factor": "Property Rights", "scnd_factor": "Government Size", "correlation": -0.16},
+        {"fst_factor": "Property Rights", "scnd_factor": "Property Rights", "correlation": 1.00},
+        {"fst_factor": "Property Rights", "scnd_factor": "Sound Money", "correlation": 0.46},
+        {"fst_factor": "Property Rights", "scnd_factor": "Trade", "correlation": 0.59},
+        {"fst_factor": "Property Rights", "scnd_factor": "Regulation", "correlation": 0.53},
+
+        {"fst_factor": "Sound Money", "scnd_factor": "Economic Freedom", "correlation": 0.80},
+        {"fst_factor": "Sound Money", "scnd_factor": "Government Size", "correlation": 0.11},
+        {"fst_factor": "Sound Money", "scnd_factor": "Property Rights", "correlation": 0.46},
+        {"fst_factor": "Sound Money", "scnd_factor": "Sound Money", "correlation": 1.00},
+        {"fst_factor": "Sound Money", "scnd_factor": "Trade", "correlation": 0.64},
+        {"fst_factor": "Sound Money", "scnd_factor": "Regulation", "correlation": 0.54},
+
+        {"fst_factor": "Trade", "scnd_factor": "Economic Freedom", "correlation": 0.84},
+        {"fst_factor": "Trade", "scnd_factor": "Government Size", "correlation": 0.08},
+        {"fst_factor": "Trade", "scnd_factor": "Property Rights", "correlation": 0.59},
+        {"fst_factor": "Trade", "scnd_factor": "Sound Money", "correlation": 0.64},
+        {"fst_factor": "Trade", "scnd_factor": "Trade", "correlation": 1.00},
+        {"fst_factor": "Trade", "scnd_factor": "Regulation", "correlation": 0.57},
+
+        {"fst_factor": "Regulation", "scnd_factor": "Economic Freedom", "correlation": 0.76},
+        {"fst_factor": "Regulation", "scnd_factor": "Government Size", "correlation": 0.15},
+        {"fst_factor": "Regulation", "scnd_factor": "Property Rights", "correlation": 0.53},
+        {"fst_factor": "Regulation", "scnd_factor": "Sound Money", "correlation": 0.54},
+        {"fst_factor": "Regulation", "scnd_factor": "Trade", "correlation": 0.57},
+        {"fst_factor": "Regulation", "scnd_factor": "Regulation", "correlation": 1.00}
+
+        
+    ]},
+
+    "encoding": {
+      "x": {"field": "fst_factor", "title": null, "type": "nominal", "sort": ["Economic Freedom", "Government Size", "Property Rights", "Sound Money", "Trade", "Regulation"]},
+      "y": {"field": "scnd_factor", "title": null, "type": "nominal", "sort": ["Economic Freedom", "Government Size", "Property Rights", "Sound Money", "Trade", "Regulation"]}
+    },
+    "layer": [
+      {
+        "mark": "rect",
+        "encoding": {
+          "color": {
+            "field": "correlation",
+            "type": "quantitative",
+            "title": "Correlation",
+            "scale": {"scheme": "greenblue"},
+            "legend": {"direction": "vertical", "gradientLength": 120}
+          }
+        }
+      },
+      {
+        "mark": "text",
+        "encoding": {
+          "text": {"field": "correlation", "type": "quantitative"},
+          "color": {
+            "condition": {"test": "datum['correlation'] < 0.2", "value":"black"},
+            "value": "white"
+          }
+        }
+      }
+    ],
+    "config": {
+      "axis": {"grid": true, "tickBand": "extent"}
+    }
+  }
+  
