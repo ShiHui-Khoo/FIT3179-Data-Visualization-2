@@ -50,7 +50,22 @@
         }
       }
     ],
-    
+    "params": [
+      {
+        "name": "Economic_Score_Selection",
+        "value": 8.97,
+        "bind": {
+          "input": "range",
+          "min": 2.88,
+          "max": 8.97,
+          "step": 0.01,
+          "name": "Economic Freedom: "
+        }
+      }
+    ],
+    "transform":[
+      {"filter": "datum['ECONOMIC FREEDOM'] <= Economic_Score_Selection"}
+    ],
     "encoding": {
       "tooltip": [
         {"field": "countries", "type": "nominal"},
