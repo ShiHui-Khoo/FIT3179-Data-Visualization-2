@@ -21,12 +21,9 @@
         "calculate": "(datum.value - datum.min) / (datum.max - datum.min)",
         "as": "norm_val"
       },
+      
       {
-        "calculate": "(datum.min + datum.max) / 2",
-        "as": "mid"
-      },
-      {
-        "calculate": "datum.Rank / 178 * 100",
+        "calculate": "datum.Rank / 162 * 100",
         "as": "percentile"
       }
     ],
@@ -97,19 +94,7 @@
         "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
       }]
     }, {
-      "encoding": {
-        "x": {"type": "nominal", "field": "key", "sort": ["Economic Freedom", "Government Size", "Property Rights", "Sound Money", "Trade", "Regulation"]},
-        "y": {"value": 300}
-      },
-      "layer": [{
-        "mark": {"type": "text", "style": "label"},
-        "encoding": {
-          "text": {"aggregate": "min", "field": "mid"}
-        }
-      }, {
-        "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
-      }]
-    }, {
+      
       "encoding": {
         "x": {"type": "nominal", "field": "key", "sort": ["Economic Freedom", "Government Size", "Property Rights", "Sound Money", "Trade", "Regulation"]},
         "y": {"value": 600}
