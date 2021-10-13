@@ -78,7 +78,7 @@
         {"field": "Country", "type": "nominal"},
         {"field": "rank", "type": "quantitative", "title": "Rank"},
         {"field": "ECONOMIC FREEDOM", "type": "quantitative", "title": "Economic Freedom"},
-        {"field": "1_size_government", "type": "quantitative", "title": "Government Size"}
+        {"field": "1_size_government", "type": "quantitative", "title": "Government Size", "format": ".2f"}
       ]
     } 
   }

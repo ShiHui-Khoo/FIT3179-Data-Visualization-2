@@ -100,7 +100,7 @@
         {"field": "countries", "type": "nominal"},
         {"field": "rank", "type": "quantitative", "title": "Rank"},
         {"field": "ECONOMIC FREEDOM", "type": "quantitative", "title": "Economic Freedom"},
-        {"field": "4_trade", "type": "quantitative", "title": "Trade"}
+        {"field": "4_trade", "type": "quantitative", "title": "Trade", "format": ".2f"}
       ]
     } 
   }
