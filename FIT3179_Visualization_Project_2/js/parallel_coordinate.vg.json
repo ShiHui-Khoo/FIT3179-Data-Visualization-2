@@ -65,19 +65,19 @@
             "field": "Economic Freedom"
           }, {
             "type": "quantitative",
-            "field": "Government Size"
+            "field": "Government Size", "format": ".2f"
           }, {
             "type": "quantitative",
-            "field": "Property Rights"
+            "field": "Property Rights", "format": ".2f"
           }, {
             "type": "quantitative",
-            "field": "Sound Money"
+            "field": "Sound Money", "format": ".2f"
           }, {
             "type": "quantitative",
-            "field": "Trade"
+            "field": "Trade", "format": ".2f"
           }, {
             "type": "quantitative",
-            "field": "Regulation"
+            "field": "Regulation", "format": ".2f"
           }]
       }
     }, {
@@ -88,7 +88,7 @@
       "layer": [{
         "mark": {"type": "text", "style": "label"},
         "encoding": {
-          "text": {"aggregate": "max", "field": "max"}
+          "text": {"aggregate": "max", "field": "max", "format": ".2f"}
         }
       }, {
         "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
