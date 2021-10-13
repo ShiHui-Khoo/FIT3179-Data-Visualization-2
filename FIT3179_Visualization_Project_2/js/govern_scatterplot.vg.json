@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width":310,
     "height": 400,
-    "data": {"url": "https://raw.githubusercontent.com/ShiHui-Khoo/FIT3179_Data_Visualization_2/main/FIT3179_Visualization_Project_2/data/economic_score_2016.csv"},
+    "data": {"url": "https://raw.githubusercontent.com/ShiHui-Khoo/FIT3179_Data_Visualization_2/main/FIT3179_Visualization_Project_2/data/continent_econs.csv"},
     "title": "Government Size in relation to Economic Freedom",
     
     "layer": [
@@ -39,15 +39,44 @@
           "step": 0.01,
           "name": "Economic Freedom: "
         }
-      }
+      },
+      {
+        "name": "Continent_Selection",
+        "bind": {
+            "input": "select",
+            "options": [
+                null,
+                "Africa",
+                "Arab States",
+                "Asia & Pacific",
+                "Europe",
+                "Middle East",
+                "North America",
+                "South/Latin America"
+            ],
+            "labels": [
+                "Show All",
+                "Africa",
+                "Arab States",
+                "Asia & Pacific",
+                "Europe",
+                "Middle East",
+                "North America",
+                "South/Latin America"
+            ],
+            "name": "Continent Selection: "
+        }
+    }
     ],
     "transform":[
-      {"filter": "datum['ECONOMIC FREEDOM'] <= Economic_Score_Selection"}
+      {"filter": "datum['ECONOMIC FREEDOM'] <= Economic_Score_Selection"},
+      {"filter": "Continent_Selection == null || Continent_Selection == datum.continent"},
+      {"filter": "datum['ECONOMIC FREEDOM'] > 0"}
     ],
     "encoding": {
       "tooltip": [
         {"field": "Country", "type": "nominal"},
-        {"field": "Rank", "type": "quantitative"},
+        {"field": "rank", "type": "quantitative", "title": "Rank"},
         {"field": "ECONOMIC FREEDOM", "type": "quantitative", "title": "Economic Freedom"},
         {"field": "1_size_government", "type": "quantitative", "title": "Government Size"}
       ]
