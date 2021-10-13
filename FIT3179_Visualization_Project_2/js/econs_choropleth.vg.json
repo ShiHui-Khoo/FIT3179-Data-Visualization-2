@@ -1,0 +1,35 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Economic Freedom of each Country in the World 2016",
+    "width": 800,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+      "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.NAME",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/ShiHui-Khoo/FIT3179_Data_Visualization_2/main/FIT3179_Visualization_Project_2/data/economic_score_2016.csv"
+          },
+          "key": "countries",
+          "fields": ["ECONOMIC FREEDOM", "rank"]
+        }
+      }
+    ],
+    "projection": {"type": "equirectangular"},
+    "mark": {"type": "geoshape"},
+    "encoding": {
+      "color": {
+        "field": "ECONOMIC FREEDOM",
+        "type": "quantitative",
+        "scale": {"scheme": "yellowgreenblue"}
+      },
+      "tooltip": [
+        {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+        {"field": "ECONOMIC FREEDOM", "type": "quantitative"}
+      ]
+    }
+  }

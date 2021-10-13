@@ -1,0 +1,63 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width":310,
+    "height": 400,
+    "data": {"url": "https://raw.githubusercontent.com/ShiHui-Khoo/FIT3179_Data_Visualization_2/main/FIT3179_Visualization_Project_2/data/economic_score_2016.csv"},
+    "title": "Trade in relation to Economic Freedom",
+    "layer": [
+      {
+        "mark": {
+          "type": "point",
+          "filled": true
+        },
+        "encoding": {
+          "x": {
+            "field": "4_trade",
+            "type": "quantitative",
+            "title": "Trade"
+          },
+          "y": {
+            "field": "ECONOMIC FREEDOM",
+            "type": "quantitative",
+            "title": "Economic Freedom",
+            "scale": {"domain": [0, 10]}
+          },
+          "size": {"value": 60}
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "color": "#B22222"
+        },
+        "transform": [
+          {
+            "regression": "4_trade",
+            "on": "ECONOMIC FREEDOM"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "4_trade",
+            "type": "quantitative",
+            "title": "Trade"
+          },
+          "y": {
+            "field": "ECONOMIC FREEDOM",
+            "type": "quantitative",
+            "title": "Economic Freedom"
+          }
+        }
+      }
+    ],
+    
+    "encoding": {
+      "tooltip": [
+        {"field": "countries", "type": "nominal"},
+        {"field": "rank", "type": "quantitative"},
+        {"field": "ECONOMIC FREEDOM", "type": "quantitative", "title": "Economic Freedom"},
+        {"field": "4_trade", "type": "quantitative", "title": "Trade"}
+      ]
+    } 
+  }
+  

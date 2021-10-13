@@ -1,0 +1,135 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Though Vega-Lite supports only one scale per axes, one can create a parallel coordinate plot by folding variables, using `joinaggregate` to normalize their values and using ticks and rules to manually create axes.",
+    "width": 1025,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/ShiHui-Khoo/FIT3179_Data_Visualization_2/main/FIT3179_Visualization_Project_2/data/new_economic_score_2016.csv"
+    },
+    "transform": [
+      {"filter": "datum['Economic Freedom']"},
+      {"window": [{"op": "count", "as": "index"}]},
+      {"fold": ["Economic Freedom", "Government Size", "Property Rights", "Sound Money", "Trade", "Regulation"]},
+      {
+        "joinaggregate": [
+          {"op": "min", "field": "value", "as": "min"},
+          {"op": "max", "field": "value", "as": "max"}
+        ],
+        "groupby": ["key"]
+      },
+      {
+        "calculate": "(datum.value - datum.min) / (datum.max - datum.min)",
+        "as": "norm_val"
+      },
+      {
+        "calculate": "(datum.min + datum.max) / 2",
+        "as": "mid"
+      },
+      {
+        "calculate": "datum.Rank / 178 * 100",
+        "as": "percentile"
+      }
+    ],
+    "layer": [{
+      "mark": {"type": "rule", "color": "#ccc"},
+      "encoding": {
+        "detail": {"aggregate": "count"},
+        "x": {"field": "key", "sort": ["Economic Freedom", "Government Size", "Property Rights", "Sound Money", "Trade", "Regulation"]}
+      }
+    }, {
+      "mark": "line",
+      "encoding": {
+        "color": {
+            "type": "quantitative", 
+            "field": "percentile", 
+            "scale": {
+                "type": "quantile",
+                "range": [
+                  "#BA0732",
+                  "#A8AA0C",
+                  "#07ADBA",
+                  "#7D229A"
+                ]
+            }
+        },
+        "detail": {"type": "nominal", "field": "index"},
+        "opacity": {"value": 0.3},
+        "x": {"type": "nominal", "field": "key", "sort": ["Economic Freedom", "Government Size", "Property Rights", "Sound Money", "Trade", "Regulation"]},
+        "y": {"type": "quantitative", "field": "norm_val", "axis": null},
+        "tooltip": [
+          {
+            "type": "nominal",
+            "field": "Country"
+          }, {
+            "type": "quantitative",
+            "field": "Rank"
+          }, {
+            "type": "quantitative",
+            "field": "Economic Freedom"
+          }, {
+            "type": "quantitative",
+            "field": "Government Size"
+          }, {
+            "type": "quantitative",
+            "field": "Property Rights"
+          }, {
+            "type": "quantitative",
+            "field": "Sound Money"
+          }, {
+            "type": "quantitative",
+            "field": "Trade"
+          }, {
+            "type": "quantitative",
+            "field": "Regulation"
+          }]
+      }
+    }, {
+      "encoding": {
+        "x": {"type": "nominal", "field": "key", "sort": ["Economic Freedom", "Government Size", "Property Rights", "Sound Money", "Trade", "Regulation"]},
+        "y": {"value": 0}
+      },
+      "layer": [{
+        "mark": {"type": "text", "style": "label"},
+        "encoding": {
+          "text": {"aggregate": "max", "field": "max"}
+        }
+      }, {
+        "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
+      }]
+    }, {
+      "encoding": {
+        "x": {"type": "nominal", "field": "key", "sort": ["Economic Freedom", "Government Size", "Property Rights", "Sound Money", "Trade", "Regulation"]},
+        "y": {"value": 300}
+      },
+      "layer": [{
+        "mark": {"type": "text", "style": "label"},
+        "encoding": {
+          "text": {"aggregate": "min", "field": "mid"}
+        }
+      }, {
+        "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
+      }]
+    }, {
+      "encoding": {
+        "x": {"type": "nominal", "field": "key", "sort": ["Economic Freedom", "Government Size", "Property Rights", "Sound Money", "Trade", "Regulation"]},
+        "y": {"value": 600}
+      },
+      "layer": [{
+        "mark": {"type": "text", "style": "label"},
+        "encoding": {
+          "text": {"aggregate": "min", "field": "min"}
+        }
+      }, {
+        "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
+      }]
+    }
+  ],
+    "config": {
+      "axisX": {"domain": false, "labelAngle": 0, "tickColor": "#ccc", "title": null},
+      "view": {"stroke": null},
+      "style": {
+        "label": {"baseline": "middle", "align": "right", "dx": -5},
+        "tick": {"orient": "horizontal"}
+      }
+    }
+  }

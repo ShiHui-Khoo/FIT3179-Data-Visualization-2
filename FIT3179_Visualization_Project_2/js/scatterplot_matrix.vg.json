@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "repeat": {
+      "row": ["ECONOMIC FREEDOM", "2_property_rights", "5_regulation"],
+      "column": ["5_regulation", "2_property_rights", "ECONOMIC FREEDOM"]
+    },
+    "spec": {
+      "data": {"url": "https://raw.githubusercontent.com/ShiHui-Khoo/FIT3179_Data_Visualization_2/main/FIT3179_Visualization_Project_2/data/economic_score_2016.csv"},
+      "mark": "point",
+      
+      "encoding": {
+        "x": {"field": {"repeat": "column"}, "type": "quantitative"},
+        "y": {
+          "field": {"repeat": "row"},
+          "type": "quantitative",
+          "axis": {"minExtent": 30}
+        }
+        
+      }
+    }
+  }
+  
