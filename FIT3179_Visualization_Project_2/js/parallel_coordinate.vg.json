@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Though Vega-Lite supports only one scale per axes, one can create a parallel coordinate plot by folding variables, using `joinaggregate` to normalize their values and using ticks and rules to manually create axes.",
-    "width": 1025,
+    "width": 600,
     "height": 400,
     "data": {
       "url": "https://raw.githubusercontent.com/ShiHui-Khoo/FIT3179_Data_Visualization_2/main/FIT3179_Visualization_Project_2/data/new_economic_score_2016.csv"
@@ -97,12 +97,12 @@
       
       "encoding": {
         "x": {"type": "nominal", "field": "key", "sort": ["Economic Freedom", "Government Size", "Property Rights", "Sound Money", "Trade", "Regulation"]},
-        "y": {"value": 600}
+        "y": {"value": 400}
       },
       "layer": [{
         "mark": {"type": "text", "style": "label"},
         "encoding": {
-          "text": {"aggregate": "min", "field": "min"}
+          "text": {"aggregate": "min", "field": "min", "format": ".2f"}
         }
       }, {
         "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
