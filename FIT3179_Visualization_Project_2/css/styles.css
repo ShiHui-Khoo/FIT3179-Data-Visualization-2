@@ -10,7 +10,6 @@ h1{
 }
 .vis-embed{
     width: 100%;
-    padding-top: 60px;
 }
 .description h1, h2{
     margin-top: 20px;
@@ -22,7 +21,7 @@ h1{
     text-justify: inter-word;
     font-size: 16px;
     line-height: 1.4;
-    margin-bottom: 20px;
+    
     padding-right: 80px;
 }
 .description-title p{
@@ -30,14 +29,14 @@ h1{
     text-justify: inter-word;
     font-size: 16px;
     line-height: 1.4;
-    margin-bottom: 20px;
+   
 }
 .description-left p{
     text-align: justify;
     text-justify: inter-word;
     font-size: 16px;
     line-height: 1.4;
-    margin-bottom: 10px;
+    
     padding-right: 50px;
 }
 .description-right p{
@@ -45,7 +44,7 @@ h1{
     text-justify: inter-word;
     font-size: 16px;
     line-height: 1.4;
-    margin-bottom: 10px;
+  
     padding-left: 30px;
 }
 .description-left-middle p{
@@ -65,5 +64,5 @@ h1{
     font-size: 14px;
 }
 .pure-g{
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
