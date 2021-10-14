@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+.page{
+    width: 1800px;  
+    margin: auto;
+    padding: 50px;
+    padding-top: 5px;
+}
+.vis-embed{
+    width: 25%;
+}
+.description h1, h2{
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.description p{
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 17px;
+    line-height: 1.4;
+}
+.pure-g{
+    margin-bottom: 10px;
+}
