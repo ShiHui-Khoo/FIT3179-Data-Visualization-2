@@ -1,9 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width":300,
-    "height": 200,
+    "width":200,
+    "height": 220,
     "data": {"url": "https://raw.githubusercontent.com/ShiHui-Khoo/FIT3179_Data_Visualization_2/main/FIT3179_Visualization_Project_2/data/continent_econs.csv"},
-    "title": "Trade in relation to Economic Freedom",
+    "title": "Trade & Economic Freedom",
     "layer": [
       {
         "mark": {

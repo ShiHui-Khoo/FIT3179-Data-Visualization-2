@@ -5,8 +5,8 @@
       "column": ["Regulation", "Property Rights", "Economic Freedom"]
     },
     "spec": {
-      "width": 130,
-      "height": 130,
+      "width": 120,
+      "height": 120,
       "data": {"url": "https://raw.githubusercontent.com/ShiHui-Khoo/FIT3179_Data_Visualization_2/main/FIT3179_Visualization_Project_2/data/matrix.csv"},
       "mark": "point",
       
