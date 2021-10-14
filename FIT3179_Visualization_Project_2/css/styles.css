@@ -23,7 +23,7 @@ h1{
     font-size: 16px;
     line-height: 1.4;
     margin-bottom: 20px;
-    padding-right: 30px;
+    padding-right: 80px;
 }
 .description-title p{
     text-align: justify;
@@ -32,12 +32,28 @@ h1{
     line-height: 1.4;
     margin-bottom: 20px;
 }
-.description-inner p{
+.description-left p{
     text-align: justify;
     text-justify: inter-word;
     font-size: 16px;
     line-height: 1.4;
     margin-bottom: 10px;
+    padding-right: 50px;
+}
+.description-right p{
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+.description-left-middle p{
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 35px;
     padding-right: 50px;
 }
 .pure-g{
