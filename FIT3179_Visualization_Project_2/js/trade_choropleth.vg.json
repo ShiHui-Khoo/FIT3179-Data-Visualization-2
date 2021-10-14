@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Freedom to Trade internationally in each Country of the World 2016",
-    "width": 520,
-    "height": 300,
+    "title": "Freedom to Trade internationally in each Country 2016",
+    "width": 540,
+    "height": 500,
     "data": {
       "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
       "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}

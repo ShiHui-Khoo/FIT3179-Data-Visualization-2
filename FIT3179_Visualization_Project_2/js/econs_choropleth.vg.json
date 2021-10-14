@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Economic Freedom of each Country in the World 2016",
+    "title": "Economic Freedom of each Country 2016",
     "width": 500,
     "height": 382,
     "data": {
