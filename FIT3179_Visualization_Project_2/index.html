@@ -45,7 +45,7 @@
     <div class = "pure-g">
       <div class = "pure-u-1-2">
         <div id = "vis1" class = "vis-embed"></div>
-        <div class = "description-inner">
+        <div class = "description-left">
           <p>
             Here is an <b><i>overview</i></b> of <b>Economic Freedom index</b> for <b>162 countries</b> 
             in the year <b>2016</b> shown as a choropleth map of <b>equirectangular</b> aspect.
@@ -62,11 +62,16 @@
 
 
       <div class = "pure-u-1-2">
-        <div id = "vis2" class = "vis-embed">
-        </div>
-        <div class = "description">
+        <div id = "vis2" class = "vis-embed"></div>
+        <div class = "description-right">
           <p>
-            Heatmap.
+            Let's have a look at the <b>correlation</b> between the main features in the Heatmap
+            presented here.
+          </p>
+          <p>
+            It is quite obvious to see that most of them are <b>strongly correlated</b> 
+            to the <b>Economic Freedom index</b>, 
+            having <b>Government Size</b> as an <b><i>exception</i></b>.
           </p>
         </div>
       </div>
@@ -75,24 +80,47 @@
 
 
     <div class = "pure-g">
-
-
-      <div class = "pure-u-1-4">
-        <div id = "vis3", class = "vis-embed">
+      <div class = "pure-u-1-2">
+        <div id = "vis3", class = "vis-embed"></div>
+        <div class = "description-left">
+          <p>
+            Let's observe from a <b>different</b> perspective.   
+          </p>
+          <p>
+            As we can see from this <b>parallel coordinate</b> plot here,
+            countries that are of <b>higher ranking</b> (high Economic Freedom index) have relatively 
+            <b>high scores</b> of <b><i>property rights</i></b>,
+            <b><i>sound money</i></b>, <b><i>freedom to trade internationally</i></b>
+            and <b><i>regulation</i></b>. 
+          </p>
+          <p>
+            However, their scores for <b>Government Size</b> vary, but majority having <b>lower scores</b>.
+          </p>
         </div>
       </div>
 
-      <div class = "pure-u-1-4"></div>
 
       <div class = "pure-u-1-4">
-        <div id = "vis4", class = "vis-embed">
+        <div id = "vis4", class = "vis-embed"></div>
+        <div class = "description-left">
+          <p>
+            As we saw from the <b>Heatmap</b> previously, the factor 
+            <b><i>freedom to trade internationally</i></b> 
+            has the <b>highest</b> correlation score with <b><i>economic freedom index</i></b>. 
+            So, let us see if that is really the case by zooming in with a <b>scatterplot</b>.  
+          </p>
+          <p>
+            <b>Yes</b> it is! As we can see from the linear regression line above,
+            the <b>higher</b> the score of freedom to trade, the <b>higher</b> the score of
+            economic freedom index.
+          </p>
         </div>
       </div>
 
 
       <div class = "pure-u-1-4">
-        <div id = "vis5", class = "vis-embed">
-        </div>
+        <div id = "vis5", class = "vis-embed"></div>
+        
       </div>
 
     </div>
