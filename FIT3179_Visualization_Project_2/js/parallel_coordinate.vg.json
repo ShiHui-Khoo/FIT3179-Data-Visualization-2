@@ -42,10 +42,10 @@
             "scale": {
                 "type": "quantile",
                 "range": [
-                  "#BA0732",
-                  "#A8AA0C",
-                  "#07ADBA",
-                  "#7D229A"
+                  "#B41B18",
+                  "#EA211E",
+                  "#F49B3C",
+                  "#F6DE85"
                 ]
             }
         },
