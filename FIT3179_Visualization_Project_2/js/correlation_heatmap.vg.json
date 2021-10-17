@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 350,
-    "height": 300,
-    "background": "lightgrey",
+    "width": 450,
+    "height": 400,
+    "background": "#F2F4F4",
     "data": {"values":[
         {"fst_factor": "Economic Freedom", "scnd_factor": "Economic Freedom", "correlation": 1.00},
         {"fst_factor": "Economic Freedom", "scnd_factor": "Government Size", "correlation": 0.29},

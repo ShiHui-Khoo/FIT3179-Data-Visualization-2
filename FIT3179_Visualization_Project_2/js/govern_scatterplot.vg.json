@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width":250,
-    "height": 325,
-    "background": "lightgrey",
+    "width":310,
+    "height": 427,
+    "background": "#F2F4F4",
     "data": {"url": "https://raw.githubusercontent.com/ShiHui-Khoo/FIT3179_Data_Visualization_2/main/FIT3179_Visualization_Project_2/data/continent_econs.csv"},
     "title": "Government Size & Economic Freedom",
     

@@ -1,13 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "background": "lightgrey",
+    "background": "#F2F4F4",
     "repeat": {
       "row": ["Economic Freedom", "Property Rights", "Regulation"],
       "column": ["Regulation", "Property Rights", "Economic Freedom"]
     },
     "spec": {
-      "width": 120,
-      "height": 120,
+      "width": 175,
+      "height": 150,
       "data": {"url": "https://raw.githubusercontent.com/ShiHui-Khoo/FIT3179_Data_Visualization_2/main/FIT3179_Visualization_Project_2/data/matrix.csv"},
       "mark": "point",
       
