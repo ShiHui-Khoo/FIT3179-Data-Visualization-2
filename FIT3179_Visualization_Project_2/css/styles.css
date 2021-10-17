@@ -19,7 +19,7 @@ h1{
 .description p{
     text-align: justify;
     text-justify: inter-word;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.4;
     
     padding-right: 80px;
@@ -27,14 +27,14 @@ h1{
 .description-title p{
     text-align: justify;
     text-justify: inter-word;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.4;
    
 }
 .description-left p{
     text-align: justify;
     text-justify: inter-word;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.4;
     
     padding-right: 50px;
@@ -42,14 +42,14 @@ h1{
 .description-right p{
     text-align: justify;
     text-justify: inter-word;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.4;
   
 }
 .description-left-middle p{
     text-align: justify;
     text-justify: inter-word;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.4;
     margin-bottom: 35px;
     padding-right: 50px;
