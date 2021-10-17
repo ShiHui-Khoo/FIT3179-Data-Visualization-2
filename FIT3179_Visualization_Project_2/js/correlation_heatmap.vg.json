@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 450,
-    "height": 400,
+    "height": 390,
     "background": "#F2F4F4",
     "data": {"values":[
         {"fst_factor": "Economic Freedom", "scnd_factor": "Economic Freedom", "correlation": 1.00},
@@ -62,7 +62,8 @@
             "type": "quantitative",
             "title": "Correlation",
             "scale": {"scheme": "greenblue"},
-            "legend": {"direction": "vertical", "gradientLength": 120}
+            "legend": {"direction": "vertical", "gradientLength": 120,
+                       "titleFontSize": 14, "labelFontSize": 12}
           }
         }
       },
@@ -78,7 +79,9 @@
       }
     ],
     "config": {
-      "axis": {"grid": true, "tickBand": "extent"}
+      "axis": {"grid": true, "tickBand": "extent"},
+      "axisX": {"labelFontSize": 12},
+      "axisY": {"labelFontSize": 12}
     }
   }
   

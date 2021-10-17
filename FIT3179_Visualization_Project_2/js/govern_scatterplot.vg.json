@@ -1,11 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width":310,
-    "height": 427,
+    "height": 419,
     "background": "#F2F4F4",
     "data": {"url": "https://raw.githubusercontent.com/ShiHui-Khoo/FIT3179_Data_Visualization_2/main/FIT3179_Visualization_Project_2/data/continent_econs.csv"},
-    "title": "Government Size & Economic Freedom",
-    
+    "title": {"text": "Government Size & Economic Freedom",
+              "fontSize": 18},
     "layer": [
       {
         "mark": {
@@ -81,6 +81,10 @@
         {"field": "ECONOMIC FREEDOM", "type": "quantitative", "title": "Economic Freedom"},
         {"field": "1_size_government", "type": "quantitative", "title": "Government Size", "format": ".2f"}
       ]
+    },
+    "config": {
+      "axisX": {"titleFontSize": 16},
+      "axisY": {"titleFontSize": 16}
     } 
   }
   

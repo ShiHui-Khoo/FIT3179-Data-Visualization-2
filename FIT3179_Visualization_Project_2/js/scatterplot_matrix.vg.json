@@ -12,11 +12,12 @@
       "mark": "point",
       
       "encoding": {
-        "x": {"field": {"repeat": "column"}, "type": "quantitative"},
+        "x": {"field": {"repeat": "column"}, "type": "quantitative",
+              "axis": {"titleFontSize": 12}},
         "y": {
           "field": {"repeat": "row"},
           "type": "quantitative",
-          "axis": {"minExtent": 30}
+          "axis": {"minExtent": 30, "titleFontSize": 12}
         },
         "tooltip": [
           {"field": "countries", "type": "nominal", "title": "Country"},
@@ -24,9 +25,7 @@
           {"field": "Economic Freedom", "type": "quantitative"},
           {"field": "Property Rights", "type": "quantitative", "format": ".2f"},
           {"field": "Regulation", "type": "quantitative", "format": ".2f"}
-
         ]
-        
       }
     }
   }
