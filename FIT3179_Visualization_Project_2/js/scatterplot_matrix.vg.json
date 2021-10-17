@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "lightgrey",
     "repeat": {
       "row": ["Economic Freedom", "Property Rights", "Regulation"],
       "column": ["Regulation", "Property Rights", "Economic Freedom"]
